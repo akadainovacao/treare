@@ -1,0 +1,77 @@
+@import "fonts.css";
+@import "reset.css";
+
+/*
+ *  Tipografia
+*/
+
+h1 { margin: 10px 0; font-size: 2.5rem }
+h2 { margin: 10px 0; font-size: 2rem }
+h3 { margin: 10px 0; font-size: 1.75rem }
+h4 { margin: 10px 0; font-size: 1.5rem }
+h5 { margin: 10px 0; font-size: 1.25rem }
+h6 { margin: 10px 0; font-size: 1rem }
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-flex {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container-fluid {
+  display: block;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.logo {
+  max-width: 100%;
+  width: 100%;
+}
+
+.treare {
+  font-family: "Roboto bold";
+  font-size: 45em;
+}
+
+.contact {
+  color: #08519f;
+}
+
+/* Media Query Container, the media query follows a precedence */
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
