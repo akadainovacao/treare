@@ -22,22 +22,40 @@
 </head>
 <body>
   <div class="container">
-      <div class="brand-log" style="text-align: center; margin: 15px 0;">
-          <a href="#" style=" display: inline-block; width: 30%;">
-            <img src="assets/images/logo-01.svg" alt="TREARE" class="logo">
-          </a>
-      </div>
-      <div style="text-align: center;">
-          <h3>
-              Desculpe o transtorno, estamos fazendo melhoria no layout do nosso site.
-          </h3>
-          <h4>Em breve, estaremos de volta!</h4>
-          <p>
-            Para mais informações entre em contato <a href="mailto:contato@treare.com"><span class="contact">contato@treare.com</span></a>
-          </p>
-      </div>
-      
-  </div>  
-	
+    <header>
+      <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbar-links">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="services" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Soluções
+              </a>
+              <div class="dropdown-menu" aria-labelledby="services">
+                <a class="nav-link dropdown-toggle" href="#" id="aplications" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span>Aplicações</span>
+                  <div class="dropdown-menu" aria-labelledby="aplications">
+                    <a class="dropdown-item" href="#">Sites & Hotsites</a>
+                  </div>
+                </a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  </div>
 </body>
 </html>

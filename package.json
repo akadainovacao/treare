@@ -1,0 +1,22 @@
+{
+  "name": "treare",
+  "version": "1.0.0",
+  "description": "this is website institutional",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akadainovacao/treare.github.io.git"
+  },
+  "author": "Vincenzo Grisorio Neto (vincenzovgn@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akadainovacao/treare.github.io/issues"
+  },
+  "homepage": "https://github.com/akadainovacao/treare.github.io#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.3"
+  }
+}
