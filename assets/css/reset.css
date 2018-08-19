@@ -28,8 +28,18 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html{
+  min-height:100%;/* make sure it is at least as tall as the viewport */
+  width: 100%;
+  position:relative;
+}
 body {
-  background: #e9f2fd;
+  /* background: #e9f2fd; */
+  height: 100%;
+  background-image: url('./../images/background-01.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   font-family: "Roboto regular", Fallback, sans-serif;
 }
 ol, ul {
