@@ -7,7 +7,7 @@
 * Nav
 */
 .navbar {
-  height: 75px;
+  height: 80px;
   padding: 0;
 }
 
@@ -20,6 +20,13 @@
   margin: 0;
 }
 
-.img-logo, .img-logo > img {
-  height: inherit;
+.img-logo {
+  height: 100px;
+}
+
+.img-circle {
+  border-radius: 100%;
+  height: 200px;
+  object-fit: cover;
+  width: 200px;  
 }
