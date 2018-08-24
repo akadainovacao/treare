@@ -1,4 +1,5 @@
 @import "fonts.css";
+@import "tipography";
 @import "reset.css";
 
 @import './../../node_modules/bootstrap/dist/css/bootstrap.min.css';
