@@ -9,16 +9,19 @@ var sourcemaps  = require('gulp-sourcemaps');
 var concat      = require('gulp-concat');
 var uglify      = require('gulp-uglify');
 var rename      = require('gulp-rename');
+const image     = require('gulp-image');
 
 
 var paths = {
   assetsSass   : 'assets/sass', //  pasta resource são os arquivos a serem processados
   assetsJs     : 'assets/js',
   assetsFonts  : 'assets/fonts',
-  assetsVendor : 'node_modules/',
+  assetsImages  : 'assets/images',
+  assetsVendor : './node_modules/',
   distCss      : 'dist/css', //  pasta assets são os arquivos gerados
   distJs       : 'dist/js',
   distFonts    : 'dist/fonts',
+  distImages   : 'dist/images'
 };
 
 var fileNames = {
@@ -28,7 +31,8 @@ var fileNames = {
   },
 
   js  : {
-    'main'    : 'main.js',
+    'main'    : 'main.min.js',
+    'mainNoMinify': 'main.js',
     'vendor'  : 'vendors.js',
   }
 };
@@ -36,6 +40,13 @@ var fileNames = {
 var resourceFiles = {
   sass    : paths.assetsSass + '/**/*.scss',
   scripts : paths.assetsJs + '/**/*.js',
+  images  : [
+    paths.assetsImages + '/**/*.jpeg',
+    paths.assetsImages + '/**/*.jpg',
+    paths.assetsImages + '/**/*.png',
+    paths.assetsImages + '/**/*.ico',
+    paths.assetsImages + '/**/*.svg'
+  ],
   vendors : {
         js : [
              paths.assetsVendor + 'jquery/dist/jquery.js',
@@ -81,11 +92,11 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest(paths.distJs));
 });
 
-// Concatenate CSS e JS vendors
-gulp.task('vendors:sass', function() {
-    return gulp.src(resourceFiles.vendors.css)
-        .pipe(minifycss())
-        .pipe(gulp.dest(paths.distCss));
+gulp.task('scripts:noMinify', function() {
+  return gulp.src(resourceFiles.scripts)
+      .pipe(concat(fileNames.js.mainNoMinify))
+      // .pipe(uglify())
+      .pipe(gulp.dest(paths.distJs));
 });
 
 gulp.task('vendors:js', function() {
@@ -95,21 +106,43 @@ gulp.task('vendors:js', function() {
         .pipe(gulp.dest(paths.distJs));
 });
 
+// Concatenate CSS e JS vendors
+gulp.task('vendors:sass', function() {
+  return gulp.src(resourceFiles.vendors.css)
+      .pipe(minifycss())
+      .pipe(gulp.dest(paths.distCss));
+});
+
 gulp.task('fonts', function() {
     gulp.src(resourceFiles.vendors.fonts)
         .pipe(gulp.dest(paths.distFonts));
  });
 
-gulp.task('sass:watch', function () {
-  gulp.watch('resource/sass/**/*.scss', ['sass']);
+gulp.task('image', function () {
+  gulp.src(resourceFiles.images)
+    .pipe(image({
+      pngquant: true,
+      optipng: false,
+      zopflipng: true,
+      jpegRecompress: false,
+      mozjpeg: true,
+      guetzli: false,
+      gifsicle: true,
+      svgo: true,
+      concurrent: 10,
+      quiet: true // defaults to false
+    }))
+    .pipe(gulp.dest(paths.distImages));
 });
 
-gulp.task('default', ['sass', 'sass:noMinify']);
-// gulp.task('default', [
-//   'sass', 
-//   'vendors:sass', 
-//   'scripts', 
-//   'vendors:js', 
-//   'fonts'
-//   ]
-// );
+gulp.task('sass:watch', function () {
+  gulp.watch('assets/sass/**/*.scss', ['sass']);
+});
+
+gulp.task('default', [
+  'sass', 
+  'sass:noMinify', 
+  'scripts', 
+  'scripts:noMinify',
+  'vendors:js'
+]);
