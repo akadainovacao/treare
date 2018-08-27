@@ -140,9 +140,9 @@ gulp.task('sass:watch', function () {
 });
 
 gulp.task('default', [
-  'sass', 
-  'sass:noMinify', 
-  'scripts', 
+  'sass',
+  'sass:noMinify',
+  'scripts',
   'scripts:noMinify',
   'vendors:js'
 ]);
