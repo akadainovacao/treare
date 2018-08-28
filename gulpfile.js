@@ -50,8 +50,8 @@ var resourceFiles = {
   vendors : {
         js : [
              paths.assetsVendor + 'jquery/dist/jquery.js',
-             paths.assetsVendor + 'bootstrap/dist/js/bootstrap.js',
-            //  paths.assetsVendor + 'materialize-css/dist/js/materialize.js',
+            //  paths.assetsVendor + 'bootstrap/dist/js/bootstrap.js',
+             paths.assetsVendor + 'materialize-css/dist/js/materialize.js',
             //  paths.assetsVendor + 'slick-carousel/slick/slick.js',
         ],
         css : [

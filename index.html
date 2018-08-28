@@ -22,57 +22,127 @@
 	
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div id="sidemenu" class="dropdown navbar-toggler ml-4" data-menu="menu-mobile">
-      <i class="material-icons isActive">menu</i>
-      <i class="material-icons">close</i>
-    </div>
-    <div class="menu-mobile">
-      <ul class="menu">
-        <li class="menu_title">
-            Desenvolvimento
+  <nav class="navigation">
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+    <div class="nav-wrapper center hide-on-small-only">
+      <ul id="nav-mobile" class="hide-on-med-and-down">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">O que fazemos?</a></li>
+        <li>
+          <a href="#">
+            <img src="dist/images/logo-01.png" alt="TREARE" class="logo">
+          </a>
         </li>
-        <ul class="menu_itens">
-            <li class="link">Hotsites</li>
-            <li class="link">Sites</li>
-            <li class="link">aplicações</li>
-        </ul>
-        <li class="menu_title">
-            Arte digital
-        </li>
-        <ul class="menu_itens">
-            <li class="link">Impressos</li>
-            <li class="link">Marketing</li>
-        </ul>
+        <li><a href="#">Quem somos?</a></li>
+        <li><a href="#">Contato</a></li>
       </ul>
     </div>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+    <div>
+      <ul id="slide-out" class="sidenav">
+        <li>
+          <div class="user-view center">
+            <a href="#">
+              <img src="dist/images/logo-01.png" alt="TREARE" height="80px">
+            </a>
+          </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Quem somos?</a>
-        </li>
-      </ul>
-    </div>
-    <div class="nav-img m-auto">
-      <a href="#">
-        <img src="dist/images/logo-01.png" alt="TREARE" class="img-logo">
-      </a>
-    </div>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#">O que fazemos?</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contato</a>
-        </li>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">O que fazemos?</a></li>
+        <li><a href="#">Quem somos?</a></li>
+        <li><a href="#">Contato</a></li>
       </ul>
     </div>
   </nav>
 
+  <div class="container">
+    <h2 class="card-title">Card Title</h2>
+
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-content">
+            <p>I am a very simple card. I am good at containing small bits of information.
+            I am convenient because I require little markup to use effectively.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax"><img src="dist/images/backgrounds/bg-04.jpg"></div>
+  </div>
+  <div class="section white">
+    <div class="row container">
+      <h2 class="header">Parallax</h2>
+      <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+      
+
+      <!-- skills -->
+      <div class="col s12 m4">
+        <div class="card">
+          <div class="card-image">
+            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+          </div>
+          <div class="card-content">
+            <span class="card-title">Card Title</span>
+            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+            <div class="card-content">
+              <span class="card-title">Card Title</span>
+              <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+            <div class="card">
+              <div class="card-image">
+                <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+              </div>
+              <div class="card-content">
+                <span class="card-title">Card Title</span>
+                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+              </div>
+            </div>
+          </div>
+      <!-- end skills -->
+    </div>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax"><img src="dist/images/backgrounds/bg-04.jpg"></div>
+  </div>
+
+  
+
+  <!-- <div>
+    <ul class="menu">
+      <li class="menu_title">
+          Desenvolvimento
+      </li>
+      <ul class="menu_itens">
+          <li class="link">Hotsites</li>
+          <li class="link">Sites</li>
+          <li class="link">aplicações</li>
+      </ul>
+      <li class="menu_title">
+          Arte digital
+      </li>
+      <ul class="menu_itens">
+          <li class="link">Impressos</li>
+          <li class="link">Marketing</li>
+      </ul>
+    </ul>
+  </div> -->
+      
   <script src="dist/js/vendors.js"></script>
   <script src="dist/js/main.js"></script>
 </body>

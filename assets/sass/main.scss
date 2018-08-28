@@ -1,17 +1,21 @@
-@import "./../../node_modules/material-icons/iconfont/material-icons.css";
-@import "core/settings"; // são definidas as váriaveis
+@charset "UTF-8";
 
-// core, são definidos os blocos de layout e formatação dos elementos genéricos.
+@import './../../node_modules/materialize-css/sass/components/color-variables';
+@import './../../node_modules/materialize-css/sass/components/color-classes';
+
+@import "core/settings";
+
+@import './../../node_modules/materialize-css/sass/components/variables';
+@import './../../node_modules/materialize-css/sass/components/normalize';
+
+@import "./../../node_modules/material-icons/iconfont/material-icons.css";
+
+// // core, são definidos os blocos de layout e formatação dos elementos genéricos.
 @import "core/fonts";
 @import "core/tipography";
-@import "core/reset";
 
-@import "helpers/images";
+// @import "helpers/images";
 
 @import "modules/header";
-@import "modules/footer";
-
-/**
- *  bibliotecas de terceiros.
-*/
-@import './../../node_modules/bootstrap/scss/bootstrap';
+// @import "modules/footer";
+@import './../../node_modules/materialize-css/sass/materialize.scss';
