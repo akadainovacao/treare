@@ -2078,11 +2078,33 @@ template {
 .bg-transparent {
   background: rgba(12, 81, 160, 0.1); }
 
+.parallax-inital, .parallax-middle, .parallax-final {
+  /* Set a specific height */
+  min-height: 300px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.parallax-inital {
+  /* The image used */
+  background-image: url("./../../images/bg-01.jpeg"); }
+
+.parallax-middle {
+  background-image: url("./../../images/bg-02.jpeg"); }
+
+.parallax-final {
+  background-image: url("./../../images/bg-03.jpeg"); }
+
+.parallax-container {
+  height: 250px; }
+
 /**
 * Nav
 */
 .navigation {
-  margin-bottom: 25px; }
+  margin-bottom: 65px; }
   .navigation .nav-wrapper > #nav-mobile {
     display: inline-block !important; }
     .navigation .nav-wrapper > #nav-mobile .logo {
