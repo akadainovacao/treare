@@ -1,4 +1,8 @@
 @charset "UTF-8";
+
+// Animate
+@import '../../node_modules/animate-sass/animate.scss';
+
 @import 'core/tipography';
 
 @import '../../node_modules/materialize-css/sass/components/color-variables';
@@ -21,6 +25,3 @@
 @import "modules/header";
 // @import "modules/footer";
 @import '../../node_modules/materialize-css/sass/materialize.scss';
-
-// Animate
-@import '../../node_modules/animate-sass/animate.scss';
