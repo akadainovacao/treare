@@ -1,4 +1,6 @@
-@import url(./../../node_modules/material-icons/iconfont/material-icons.css);
+.bg-transparent {
+  background: rgba(12, 81, 160, 0.1); }
+
 .materialize-red {
   background-color: #e51c23 !important; }
 
@@ -1993,6 +1995,36 @@ template {
   display: none; }
 
 @font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(MaterialIcons-Regular.eot);
+  /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url(MaterialIcons-Regular.woff2) format("woff2"), url(MaterialIcons-Regular.woff) format("woff"), url(MaterialIcons-Regular.ttf) format("truetype"); }
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga'; }
+
+@font-face {
   font-family: "Lato";
   src: url("../fonts/Lato/Lato-Light.ttf"); }
 
@@ -2075,14 +2107,40 @@ template {
   font-family: "Roboto thin italic";
   src: url("../fonts/roboto/Roboto-ThinItalic.ttf"); }
 
+@font-face {
+  font-family: "Material Icons";
+  src: url("../fonts/MaterialIcons/MaterialIcons-Regular.ttf"), url("../fonts/MaterialIcons/MaterialIcons-Regular.ttf") format("truetype"), url("../fonts/MaterialIcons/MaterialIcons-Regular.woff") format("woff"), url("../fonts/MaterialIcons/MaterialIcons-Regular.woff2") format("woff2"); }
+
 .bg-transparent {
   background: rgba(12, 81, 160, 0.1); }
+
+.parallax-inital, .parallax-middle, .parallax-final {
+  /* Set a specific height */
+  min-height: 300px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.parallax-inital {
+  /* The image used */
+  background-image: url("./../../images/bg-01.jpeg"); }
+
+.parallax-middle {
+  background-image: url("./../../images/bg-02.jpeg"); }
+
+.parallax-final {
+  background-image: url("./../../images/bg-03.jpeg"); }
+
+.parallax-container {
+  height: 250px; }
 
 /**
 * Nav
 */
 .navigation {
-  margin-bottom: 25px; }
+  margin-bottom: 65px; }
   .navigation .nav-wrapper > #nav-mobile {
     display: inline-block !important; }
     .navigation .nav-wrapper > #nav-mobile .logo {
@@ -8614,3 +8672,28 @@ input[type=range]::-ms-thumb {
     bottom: auto;
     text-align: center;
     margin-top: 1.2rem; } }
+
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license - http://opensource.org/licenses/MIT
+Copyright (c) 2015 Daniel Eden
+*/
+body {
+  -webkit-backface-visibility: hidden; }
+
+.animated {
+  -webkit-animation-duration: calc( 1s);
+  animation-duration: calc( 1s);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+  .animated.infinite {
+    animation-iteration-count: infinite; }
+  .animated.hinge {
+    -webkit-animation-duration: calc( 1s * 2);
+    animation-duration: calc( 1s * 2); }
+  .animated.bounceIn, .animated.bounceOut {
+    -webkit-animation-duration: calc( 1s * 0.75);
+    animation-duration: calc( 1s * 0.75); }
+  .animated.flipOutX, .animated.flipOutY {
+    -webkit-animation-duration: calc( 1s * 0.75);
+    animation-duration: calc( 1s * 0.75); }

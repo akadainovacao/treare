@@ -1,21 +1,26 @@
 @charset "UTF-8";
+@import 'core/tipography';
 
-@import './../../node_modules/materialize-css/sass/components/color-variables';
-@import './../../node_modules/materialize-css/sass/components/color-classes';
+@import '../../node_modules/materialize-css/sass/components/color-variables';
+@import '../../node_modules/materialize-css/sass/components/color-classes';
 
 @import "core/settings";
 
-@import './../../node_modules/materialize-css/sass/components/variables';
-@import './../../node_modules/materialize-css/sass/components/normalize';
+@import '../../node_modules/materialize-css/sass/components/variables';
+@import '../../node_modules/materialize-css/sass/components/normalize';
 
-@import "./../../node_modules/material-icons/iconfont/material-icons.css";
+@import '../../node_modules/material-design-icons/iconfont/material-icons';
 
 // // core, são definidos os blocos de layout e formatação dos elementos genéricos.
 @import "core/fonts";
 @import "core/tipography";
 
 // @import "helpers/images";
+@import "helpers/parallax";
 
 @import "modules/header";
 // @import "modules/footer";
-@import './../../node_modules/materialize-css/sass/materialize.scss';
+@import '../../node_modules/materialize-css/sass/materialize.scss';
+
+// Animate
+@import '../../node_modules/animate-sass/animate.scss';
