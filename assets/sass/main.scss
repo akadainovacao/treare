@@ -8,16 +8,16 @@
 @import '../../node_modules/materialize-css/sass/components/color-variables';
 @import '../../node_modules/materialize-css/sass/components/color-classes';
 
+@import "helpers/spacing";
 @import "core/settings";
 
 @import '../../node_modules/materialize-css/sass/components/variables';
 @import '../../node_modules/materialize-css/sass/components/normalize';
 
-@import '../../node_modules/material-design-icons/iconfont/material-icons';
+@import '../../node_modules/material-design-icons/iconfont/material-icons.css';
 
 // // core, são definidos os blocos de layout e formatação dos elementos genéricos.
-@import "core/fonts";
-@import "core/tipography";
+@import "core/font-faces";
 
 // @import "helpers/images";
 @import "helpers/parallax";
